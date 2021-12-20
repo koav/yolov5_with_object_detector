@@ -62,7 +62,7 @@ def run_camera(source=0, save=False, show_tracking = True, show_objects = False)
      #============================== /Main settings ===============================
 
     # detection
-    road_users_detector = ChristmasDetection(obj_wights, obj_classes, conf_thres=detector_conf_thres, 
+    christmas_detection = ChristmasDetection(obj_wights, obj_classes, conf_thres=detector_conf_thres, 
         iou_thres=detector_iou_thres, input_width = detector_input_width)
 
     # plotting
@@ -90,7 +90,7 @@ def run_camera(source=0, save=False, show_tracking = True, show_objects = False)
             if ret:
 
                 # detection process
-                objs = road_users_detector.detect(frame)
+                objs = christmas_detection.detect(frame)
 
                 # plotting
                 detections = []
